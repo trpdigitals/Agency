@@ -6,9 +6,9 @@ import MaxWrapper from "./ui/MaxWrapper";
 import { cn } from "@/lib/utils";
 
 const stats = [
-  { value: 5, suffix: "+", label: "Projects Delivered", color: "text-primary" },
-  { value: 5, suffix: "+", label: "Happy Clients", color: "text-blue-400" },
-  { value: 100, suffix: "%", label: "Client Satisfaction", color: "text-orange-400" },
+  { value: 5, suffix: "+", label: "Projects Delivered", color: "text-primary", barColor: "bg-primary" },
+  { value: 5, suffix: "+", label: "Happy Clients", color: "text-blue-600", barColor: "bg-blue-600" },
+  { value: 100, suffix: "%", label: "Client Satisfaction", color: "text-orange-600", barColor: "bg-orange-600" },
 ];
 
 function AnimatedCounter({
@@ -87,7 +87,7 @@ export default function StatsStrip() {
                 initial={{ scaleX: 0 }}
                 animate={inView ? { scaleX: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
-                className={cn("h-0.5 w-12 rounded-full mt-1 origin-left", stat.color.replace("text-", "bg-"))}
+                className={cn("h-0.5 w-12 rounded-full mt-1 origin-left", stat.barColor || stat.color.replace("text-", "bg-"))}
               />
             </motion.div>
           ))}

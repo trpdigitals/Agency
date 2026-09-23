@@ -200,7 +200,7 @@ export default function AdminLayout({
         <button
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-foreground hover:text-white"
+          className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:text-white"
         >
           {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -220,7 +220,7 @@ export default function AdminLayout({
             {/* Close trigger inside panel */}
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="absolute top-6 right-4 w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 text-foreground hover:text-white"
+              className="absolute top-6 right-4 w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 text-white hover:text-white"
             >
               <X size={16} />
             </button>

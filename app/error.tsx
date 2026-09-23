@@ -113,7 +113,7 @@ export default function GlobalError({
                   padding: "14px 32px",
                   borderRadius: "16px",
                   background: "linear-gradient(135deg, #ef4444 0%, #fb923c 100%)",
-                  color: "#ffffff",
+                  color: "#111111",
                   fontWeight: 600,
                   fontSize: "15px",
                   border: "none",
