@@ -75,7 +75,7 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-40 transition-all duration-500",
           scrolled
-            ? "bg-background/80 backdrop-blur-xl border-b border-white/10 py-3 shadow-2xl"
+            ? "bg-background/90 backdrop-blur-xl border-b border-foreground/10 py-3 shadow-md"
             : "bg-transparent py-6"
         )}
       >
@@ -86,7 +86,7 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-10">
-            <nav aria-label="Main Navigation" className="flex items-center gap-8 px-6 py-2 rounded-full glass border-white/5">
+            <nav aria-label="Main Navigation" className="flex items-center gap-8 px-6 py-2 rounded-full border border-foreground/10 bg-foreground/5">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -95,8 +95,8 @@ export default function Navbar() {
                     href={link.href}
                     title={`${link.name} — TRP Digitals`}
                     className={cn(
-                      "relative text-sm font-medium transition-colors hover:text-white",
-                      isActive ? "text-white" : "text-foreground/50"
+                      "relative text-sm font-medium transition-colors hover:text-foreground",
+                      isActive ? "text-foreground" : "text-foreground/50"
                     )}
                   >
                     {link.name}
@@ -126,7 +126,7 @@ export default function Navbar() {
             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
-            className="md:hidden touch-target w-10 h-10 flex items-center justify-center text-foreground hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all"
+            className="md:hidden touch-target w-10 h-10 flex items-center justify-center text-foreground hover:text-primary bg-foreground/5 hover:bg-foreground/10 border border-foreground/10 rounded-xl transition-all"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -155,14 +155,14 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -12, scale: 0.96 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed top-20 left-4 right-4 max-w-md mx-auto z-50 md:hidden bg-[#0d0d12]/95 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.8)] shadow-primary/10 overflow-hidden flex flex-col gap-6"
+              className="fixed top-20 left-4 right-4 max-w-md mx-auto z-50 md:hidden bg-background/95 backdrop-blur-2xl border border-foreground/10 rounded-3xl p-6 shadow-2xl overflow-hidden flex flex-col gap-6"
             >
-              <div className="flex justify-between items-center pb-4 border-b border-white/10">
+              <div className="flex justify-between items-center pb-4 border-b border-foreground/10">
                 <Logo />
                 <button
                   onClick={() => setIsOpen(false)}
                   aria-label="Close navigation menu"
-                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-foreground/80 hover:text-white hover:bg-white/10 transition-colors"
+                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-foreground/5 border border-foreground/10 text-foreground/80 hover:text-foreground hover:bg-foreground/10 transition-colors"
                 >
                   <X size={20} />
                 </button>
@@ -184,7 +184,7 @@ export default function Navbar() {
                           "flex items-center min-h-12 px-4 rounded-xl text-base sm:text-lg font-medium transition-all duration-200",
                           isActive
                             ? "text-primary bg-primary/15 border-l-4 border-primary pl-3 font-semibold"
-                            : "text-foreground/80 hover:text-white hover:bg-white/5"
+                            : "text-foreground/80 hover:text-primary hover:bg-foreground/5"
                         )}
                         onClick={() => setIsOpen(false)}
                       >
@@ -195,11 +195,11 @@ export default function Navbar() {
                 })}
               </nav>
 
-              <div className="pt-4 border-t border-white/10">
+              <div className="pt-4 border-t border-foreground/10">
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="w-full py-3.5 px-4 rounded-xl cta-primary text-white font-semibold text-center flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(192,132,252,0.3)] hover:brightness-110 active:scale-95 transition-all"
+                  className="w-full py-3.5 px-4 rounded-xl cta-primary text-white font-semibold text-center flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(239,68,68,0.3)] hover:brightness-110 active:scale-95 transition-all"
                 >
                   <span>Get Started — Free Consult</span>
                   <ArrowRight className="w-4 h-4" />

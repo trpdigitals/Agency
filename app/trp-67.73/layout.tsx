@@ -120,13 +120,13 @@ export default function AdminLayout({
                   "flex items-center gap-3.5 px-4 py-3.5 rounded-xl text-sm font-semibold transition-all duration-300 group",
                   isActive
                     ? "text-white bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(192,132,252,0.08)]"
-                    : "text-foreground/50 hover:text-white hover:bg-white/5 border border-transparent"
+                    : "text-white/50 hover:text-white hover:bg-white/5 border border-transparent"
                 )}
               >
                 <Icon 
                   className={cn(
                     "w-4.5 h-4.5 transition-colors duration-300",
-                    isActive ? "text-primary" : "text-foreground/40 group-hover:text-white"
+                    isActive ? "text-primary" : "text-white/40 group-hover:text-white"
                   )} 
                 />
                 <span>{link.name}</span>
@@ -177,7 +177,7 @@ export default function AdminLayout({
   }
 
   return (
-    <div className="min-h-screen bg-[#070709] text-foreground font-sans antialiased flex">
+    <div className="admin-scope min-h-screen bg-[#070709] text-white font-sans antialiased flex">
       {/* Desktop Sidebar */}
       <aside className="hidden lg:block w-[315px] shrink-0 h-screen sticky top-0 z-30">
         <SidebarContent />

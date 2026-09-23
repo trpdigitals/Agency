@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -9,10 +10,20 @@ interface LogoProps {
 
 export default function Logo({ className, showText = true }: LogoProps) {
   return (
-    <div className={cn("flex items-center group shrink-0", className)}>
+    <div className={cn("flex items-center gap-2 group shrink-0 select-none", className)}>
+      <div className="relative h-7 sm:h-8 w-auto shrink-0 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+        <Image
+          src="/logo.png"
+          alt="TRP"
+          width={68}
+          height={32}
+          className="h-7 sm:h-8 w-auto object-contain"
+          priority
+        />
+      </div>
       {showText && (
-        <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white via-white to-white/40 bg-clip-text text-transparent group-hover:from-primary group-hover:to-secondary transition-all duration-500">
-          TRP<span className="text-primary ml-1 group-hover:text-white transition-colors duration-500">DIGITALS</span>
+        <span className="text-xl sm:text-2xl font-bold tracking-tight text-primary group-hover:text-secondary transition-colors duration-300">
+          DIGITALS
         </span>
       )}
     </div>

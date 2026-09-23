@@ -63,7 +63,7 @@ export default function PrivacyClient() {
   };
 
   return (
-    <main className="min-h-screen bg-background text-white selection:bg-primary/30">
+    <main className="min-h-screen bg-background text-foreground selection:bg-primary/30">
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-60 origin-left"
@@ -90,8 +90,8 @@ export default function PrivacyClient() {
                     className={cn(
                       "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-left group",
                       activeSection === section.id 
-                        ? "bg-secondary/10 text-secondary shadow-lg shadow-secondary/5" 
-                        : "text-white/40 hover:text-white hover:bg-white/5"
+                        ? "bg-secondary/10 text-secondary shadow-lg shadow-secondary/5 font-semibold" 
+                        : "text-foreground/50 hover:text-foreground hover:bg-foreground/5"
                     )}
                   >
                     <ChevronRight className={cn(
@@ -112,19 +112,19 @@ export default function PrivacyClient() {
               animate={{ opacity: 1, y: 0 }}
               className="mb-16"
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Privacy <span className="text-white/40">Policy</span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-foreground">
+                Privacy <span className="text-foreground/40">Policy</span>
               </h1>
               <div className="flex flex-wrap items-center gap-6 text-foreground/60 font-normal">
                 <p className="text-lg sm:text-xl">Your data, handled with transparency and care.</p>
-                <div className="flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/5 rounded-full font-mono text-xs text-white/50">
+                <div className="flex items-center gap-2 px-3 py-1 bg-foreground/5 border border-foreground/8 rounded-full font-mono text-xs text-foreground/50">
                   <Clock className="w-3 h-3" aria-hidden="true" />
                   <span>Last Updated: March 18, 2026</span>
                 </div>
               </div>
             </motion.div>
 
-            <div className="space-y-24 prose prose-invert prose-p:text-base sm:prose-p:text-lg prose-p:text-foreground/70 prose-p:leading-relaxed prose-p:font-normal prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-white">
+            <div className="space-y-24 prose prose-p:text-base sm:prose-p:text-lg prose-p:text-foreground/75 prose-p:leading-relaxed prose-p:font-normal prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground">
               <section id="introduction" className="scroll-mt-40">
                 <h2>1. Introduction</h2>
                 <p>
@@ -210,10 +210,10 @@ export default function PrivacyClient() {
                 <p>
                   If you have any questions about this Privacy Policy, please contact us:
                 </p>
-                <div className="glass p-8 rounded-3xl border-white/5 not-prose">
-                  <p className="font-mono text-xs font-medium uppercase tracking-wider text-white/50 mb-1">Email</p>
+                <div className="glass p-8 rounded-3xl border-foreground/10 not-prose shadow-lg">
+                  <p className="font-mono text-xs font-medium uppercase tracking-wider text-foreground/50 mb-1">Email</p>
                   <p className="text-primary text-lg sm:text-xl font-semibold mb-6">trpdigitals.dev@gmail.com</p>
-                  <p className="font-mono text-xs font-medium uppercase tracking-wider text-white/50 mb-1">Address</p>
+                  <p className="font-mono text-xs font-medium uppercase tracking-wider text-foreground/50 mb-1">Address</p>
                   <p className="text-foreground/70 text-base sm:text-lg font-normal">Hyderabad, Telangana, India</p>
                 </div>
               </section>

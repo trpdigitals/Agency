@@ -65,7 +65,7 @@ export default function TermsClient() {
   };
 
   return (
-    <main className="min-h-screen bg-background text-white selection:bg-primary/30">
+    <main className="min-h-screen bg-background text-foreground selection:bg-primary/30">
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-60 origin-left"
@@ -92,8 +92,8 @@ export default function TermsClient() {
                     className={cn(
                       "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-left group",
                       activeSection === section.id 
-                        ? "bg-secondary/10 text-secondary shadow-lg shadow-secondary/5" 
-                        : "text-white/40 hover:text-white hover:bg-white/5"
+                        ? "bg-secondary/10 text-secondary shadow-lg shadow-secondary/5 font-semibold" 
+                        : "text-foreground/50 hover:text-foreground hover:bg-foreground/5"
                     )}
                   >
                     <ChevronRight className={cn(
@@ -114,19 +114,19 @@ export default function TermsClient() {
               animate={{ opacity: 1, y: 0 }}
               className="mb-16"
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Terms of <span className="text-white/40">Service</span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-foreground">
+                Terms of <span className="text-foreground/40">Service</span>
               </h1>
               <div className="flex flex-wrap items-center gap-6 text-foreground/60 font-normal">
                 <p className="text-lg sm:text-xl">Clear terms for a transparent collaboration.</p>
-                <div className="flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/5 rounded-full font-mono text-xs text-white/50">
+                <div className="flex items-center gap-2 px-3 py-1 bg-foreground/5 border border-foreground/8 rounded-full font-mono text-xs text-foreground/50">
                   <Clock className="w-3 h-3" aria-hidden="true" />
                   <span>Last Updated: March 18, 2026</span>
                 </div>
               </div>
             </motion.div>
 
-            <div className="space-y-24 prose prose-invert prose-p:text-base sm:prose-p:text-lg prose-p:text-foreground/70 prose-p:leading-relaxed prose-p:font-normal prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-white">
+            <div className="space-y-24 prose prose-p:text-base sm:prose-p:text-lg prose-p:text-foreground/75 prose-p:leading-relaxed prose-p:font-normal prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground">
               <section id="introduction" className="scroll-mt-40">
                 <h2>1. Introduction</h2>
                 <p>
@@ -229,23 +229,23 @@ export default function TermsClient() {
                 <p>
                   If you have any questions about these Terms, please contact our team.
                 </p>
-                <div className="glass p-12 rounded-[3rem] border-white/5 not-prose relative overflow-hidden group">
+                <div className="glass p-12 rounded-[3rem] border-foreground/10 not-prose relative overflow-hidden group shadow-xl">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl -z-10 group-hover:bg-primary/20 transition-colors" />
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">Have questions?</h3>
-                  <p className="text-foreground/60 text-base sm:text-lg mb-8 leading-relaxed max-w-md font-normal">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Have questions?</h3>
+                  <p className="text-foreground/70 text-base sm:text-lg mb-8 leading-relaxed max-w-md font-normal">
                     Our team is here to provide clarity on our terms and collaboration process. Reach out anytime.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link 
                       href="/contact"
-                      className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white text-background font-semibold hover:bg-primary hover:text-white transition-all group/btn"
+                      className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl cta-primary text-white font-semibold shadow-md hover:scale-105 active:scale-95 transition-all group/btn"
                     >
                       Contact Us
                       <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </Link>
                     <a 
                       href="mailto:trpdigitals.dev@gmail.com"
-                      className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl glass border-white/10 text-white font-semibold hover:bg-white/10 transition-all"
+                      className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl glass border-foreground/15 text-foreground font-semibold hover:bg-foreground/5 transition-all"
                     >
                       <Mail className="w-5 h-5" aria-hidden="true" />
                       Email Us

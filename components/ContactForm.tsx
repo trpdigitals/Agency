@@ -132,12 +132,12 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="glass-card p-8 sm:p-10 rounded-3xl border border-primary/20 relative">
+    <div className="glass-card p-8 sm:p-10 rounded-3xl border border-primary/20 relative shadow-xl">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Start a Conversation</h3>
+        <h3 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">Start a Conversation</h3>
         {draftSavedStatus && !submitted && isLoaded && (
-          <span className="font-mono text-[11px] font-medium tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span className="font-mono text-[11px] font-medium tracking-wider text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
             {draftSavedStatus}
           </span>
         )}
@@ -175,9 +175,9 @@ export default function ContactForm() {
         </div>
       ) : submitted ? (
         <div className="py-16 text-center">
-          <CheckCircle2 className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
-          <h4 className="text-2xl font-semibold text-white mb-2">Request Received!</h4>
-          <p className="text-white/60 text-sm max-w-md mx-auto font-normal">
+          <CheckCircle2 className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
+          <h4 className="text-2xl font-semibold text-foreground mb-2">Request Received!</h4>
+          <p className="text-foreground/70 text-sm max-w-md mx-auto font-normal">
             Thank you for reaching out. Our team will get back to you soon.
           </p>
         </div>
@@ -195,7 +195,7 @@ export default function ContactForm() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label className="block font-mono text-xs font-medium uppercase tracking-wider text-white/60 mb-2">
+              <label className="block font-mono text-xs font-medium uppercase tracking-wider text-foreground/70 mb-2">
                 Your Name <span className="text-primary">*</span>
               </label>
               <input
@@ -204,11 +204,11 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="John Doe"
-                className="w-full px-4 py-3 rounded-xl glass border border-white/10 text-white placeholder-white/30 focus:border-primary focus:outline-none text-sm font-normal"
+                className="w-full px-4 py-3 rounded-xl bg-white/80 border border-foreground/15 text-foreground placeholder-foreground/35 focus:border-primary focus:outline-none text-sm font-normal shadow-sm"
               />
             </div>
             <div>
-              <label className="block font-mono text-xs font-medium uppercase tracking-wider text-white/60 mb-2">
+              <label className="block font-mono text-xs font-medium uppercase tracking-wider text-foreground/70 mb-2">
                 Email Address <span className="text-primary">*</span>
               </label>
               <input
@@ -217,13 +217,13 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="john@company.com"
-                className="w-full px-4 py-3 rounded-xl glass border border-white/10 text-white placeholder-white/30 focus:border-primary focus:outline-none text-sm font-normal"
+                className="w-full px-4 py-3 rounded-xl bg-white/80 border border-foreground/15 text-foreground placeholder-foreground/35 focus:border-primary focus:outline-none text-sm font-normal shadow-sm"
               />
             </div>
           </div>
 
           <div>
-            <label className="block font-mono text-xs font-medium uppercase tracking-wider text-white/60 mb-2">
+            <label className="block font-mono text-xs font-medium uppercase tracking-wider text-foreground/70 mb-2">
               Phone Number
             </label>
             <input
@@ -231,14 +231,14 @@ export default function ContactForm() {
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               placeholder="+91 98765 43210"
-              className="w-full px-4 py-3 rounded-xl glass border border-white/10 text-white placeholder-white/30 focus:border-primary focus:outline-none text-sm font-normal"
+              className="w-full px-4 py-3 rounded-xl bg-white/80 border border-foreground/15 text-foreground placeholder-foreground/35 focus:border-primary focus:outline-none text-sm font-normal shadow-sm"
             />
           </div>
 
           {/* Services Multi-Select */}
           <fieldset>
-            <legend className="block font-mono text-xs font-medium uppercase tracking-wider text-white/60 mb-3">
-              Services Needed <span className="text-white/40 font-normal">(select all that apply)</span>
+            <legend className="block font-mono text-xs font-medium uppercase tracking-wider text-foreground/70 mb-3">
+              Services Needed <span className="text-foreground/45 font-normal">(select all that apply)</span>
             </legend>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {serviceOptions.map((svc, idx) => {
@@ -251,19 +251,19 @@ export default function ContactForm() {
                     onClick={() => toggleService(svc)}
                     className={`px-4 py-3 rounded-xl border text-left text-xs transition-all flex items-center justify-between cursor-pointer ${
                       isSelected
-                        ? "border-primary bg-primary/20 text-white font-semibold shadow-[0_0_15px_rgba(192,132,252,0.2)]"
-                        : "border-white/10 glass text-white/70 hover:text-white hover:border-white/20 font-normal"
+                        ? "border-primary bg-primary/10 text-primary font-semibold shadow-sm"
+                        : "border-foreground/10 bg-white/60 text-foreground/70 hover:text-foreground hover:border-foreground/25 font-normal"
                     }`}
                   >
                     <span>{svc}</span>
                     <span
                       className={`w-4 h-4 rounded-md flex items-center justify-center border transition-all shrink-0 ${
                         isSelected
-                          ? "bg-primary border-primary text-black"
-                          : "border-white/30 bg-white/5"
+                          ? "bg-primary border-primary text-white"
+                          : "border-foreground/20 bg-foreground/5"
                       }`}
                     >
-                      {isSelected && <Check className="w-3 h-3 text-black stroke-[3]" />}
+                      {isSelected && <Check className="w-3 h-3 text-white stroke-[3]" />}
                     </span>
                   </button>
                 );
@@ -273,7 +273,7 @@ export default function ContactForm() {
 
           {/* Message Area */}
           <div>
-            <label className="block font-mono text-xs font-medium uppercase tracking-wider text-white/60 mb-2">
+            <label className="block font-mono text-xs font-medium uppercase tracking-wider text-foreground/70 mb-2">
               TELL US ABOUT YOUR PROJECT <span className="text-primary">*</span>
             </label>
             <textarea
@@ -282,12 +282,12 @@ export default function ContactForm() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               placeholder="Tell us about your business, what you want to build, your goals, and any important requirements..."
-              className="w-full px-4 py-3 rounded-xl glass border border-white/10 text-white placeholder-white/30 focus:border-primary focus:outline-none text-sm font-normal"
+              className="w-full px-4 py-3 rounded-xl bg-white/80 border border-foreground/15 text-foreground placeholder-foreground/35 focus:border-primary focus:outline-none text-sm font-normal shadow-sm"
             />
           </div>
 
           {errorMessage && (
-            <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-normal text-center">
+            <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 text-xs font-normal text-center">
               {errorMessage}
             </div>
           )}
@@ -306,7 +306,7 @@ export default function ContactForm() {
               </>
             )}
           </button>
-          <p className="text-xs font-normal text-white/50 text-center">We respect your privacy. No spam ever.</p>
+          <p className="text-xs font-normal text-foreground/50 text-center">We respect your privacy. No spam ever.</p>
         </form>
       )}
     </div>

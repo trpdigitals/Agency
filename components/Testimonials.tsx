@@ -83,9 +83,9 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-white"
+            className="text-4xl md:text-6xl font-bold text-foreground"
           >
-            What They <span className="text-white/40">Say About Us</span>
+            What They <span className="text-foreground/40">Say About Us</span>
           </motion.h2>
         </div>
 
@@ -104,8 +104,8 @@ export default function Testimonials() {
               }}
               className="absolute w-full max-w-4xl px-4"
             >
-              <div className="glass p-10 md:p-16 rounded-[3rem] border-white/5 relative overflow-hidden group">
-                <Quote className="absolute top-8 right-8 w-24 h-24 text-white/5 -rotate-12 group-hover:rotate-0 transition-transform duration-700" />
+              <div className="glass p-10 md:p-16 rounded-[3rem] border-foreground/10 shadow-xl relative overflow-hidden group">
+                <Quote className="absolute top-8 right-8 w-24 h-24 text-foreground/5 -rotate-12 group-hover:rotate-0 transition-transform duration-700" />
                 
                 <div className="flex flex-col items-center text-center relative z-10">
                   <div className="flex justify-center gap-1 mb-6">
@@ -114,12 +114,12 @@ export default function Testimonials() {
                     ))}
                   </div>
                   
-                  <p className="text-xl md:text-2xl font-normal text-white/90 leading-relaxed mb-10 italic max-w-3xl">
+                  <p className="text-xl md:text-2xl font-normal text-foreground/85 leading-relaxed mb-10 italic max-w-3xl">
                     "{testimonials[index].content}"
                   </p>
                   
                   <div>
-                    <h4 className="text-xl md:text-2xl font-semibold text-white mb-1">{testimonials[index].name}</h4>
+                    <h4 className="text-xl md:text-2xl font-semibold text-foreground mb-1">{testimonials[index].name}</h4>
                     <p className="text-primary font-mono text-xs font-medium tracking-widest uppercase">{testimonials[index].role}</p>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export default function Testimonials() {
           <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center gap-6">
             <button 
               onClick={prevStep}
-              className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all hover:scale-110 active:scale-90"
+              className="w-12 h-12 rounded-full glass border-foreground/10 flex items-center justify-center text-foreground hover:bg-foreground/5 transition-all hover:scale-110 active:scale-90"
             >
               <ChevronLeft size={24} />
             </button>
@@ -141,14 +141,14 @@ export default function Testimonials() {
                   key={i}
                   className={cn(
                     "h-1.5 rounded-full transition-all duration-500",
-                    index === i ? "w-8 bg-primary" : "w-1.5 bg-white/10"
+                    index === i ? "w-8 bg-primary" : "w-1.5 bg-foreground/15"
                   )}
                 />
               ))}
             </div>
             <button 
               onClick={nextStep}
-              className="w-12 h-12 rounded-full glass border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all hover:scale-110 active:scale-90"
+              className="w-12 h-12 rounded-full glass border-foreground/10 flex items-center justify-center text-foreground hover:bg-foreground/5 transition-all hover:scale-110 active:scale-90"
             >
               <ChevronRight size={24} />
             </button>

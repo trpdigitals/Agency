@@ -27,7 +27,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-24 bg-background relative border-y border-white/5">
+    <section className="py-24 bg-background relative border-y border-foreground/8">
       <MaxWrapper>
         {/* Header */}
         <motion.div
@@ -40,11 +40,11 @@ export default function Process() {
           <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
             HOW IT WORKS
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
             From idea to launch. <br />
             <span className="text-gradient">Simple. Transparent.</span>
           </h2>
-          <p className="text-white/60 text-base font-normal">
+          <p className="text-foreground/60 text-base font-normal">
             A straightforward process designed to take your idea from the first conversation to a finished digital product.
           </p>
         </motion.div>
@@ -60,17 +60,17 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className="glass-card p-8 rounded-2xl border border-white/10 relative flex flex-col"
+                className="glass-card p-8 rounded-2xl border border-foreground/10 relative flex flex-col"
               >
                 <div className="flex justify-between items-center mb-6">
                   <span className="text-3xl font-mono font-medium text-primary">{step.num}</span>
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/20 to-secondary/20 border border-primary/30 flex items-center justify-center text-primary">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/15 to-accent/15 border border-primary/20 flex items-center justify-center text-primary">
                     <Icon className="w-6 h-6" />
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed font-normal">{step.desc}</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
+                <p className="text-foreground/60 text-sm leading-relaxed font-normal">{step.desc}</p>
               </motion.div>
             );
           })}

@@ -5,7 +5,7 @@ export default function ServicesSkeleton() {
   return (
     <main className="min-h-screen bg-background pt-28 pb-20 overflow-hidden text-foreground">
       {/* Page Hero */}
-      <section className="relative py-16 border-b border-white/5">
+      <section className="relative py-16 border-b border-foreground/8">
         <MaxWrapper>
           <div className="max-w-4xl space-y-6">
             <Skeleton className="h-8 w-52 rounded-full" />
@@ -22,7 +22,7 @@ export default function ServicesSkeleton() {
       </section>
 
       {/* Core Services Grid */}
-      <section className="py-24 border-b border-white/5">
+      <section className="py-24 border-b border-foreground/8">
         <MaxWrapper>
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
             <Skeleton className="h-4 w-32 mx-auto rounded-full" />
@@ -31,7 +31,7 @@ export default function ServicesSkeleton() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {Array.from({ length: 6 }).map((_, idx) => (
-              <div key={idx} className="p-8 rounded-2xl glass border border-white/10 space-y-6 flex flex-col justify-between">
+              <div key={idx} className="p-8 rounded-2xl glass border border-foreground/10 space-y-6 flex flex-col justify-between">
                 <div className="space-y-4">
                   <Skeleton className="w-12 h-12 rounded-xl" />
                   <Skeleton className="h-6 w-3/4 rounded-lg" />
@@ -50,7 +50,7 @@ export default function ServicesSkeleton() {
       </section>
 
       {/* Packages Grid */}
-      <section className="py-24 border-b border-white/5">
+      <section className="py-24 border-b border-foreground/8">
         <MaxWrapper>
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
             <Skeleton className="h-4 w-40 mx-auto rounded-full" />
@@ -59,7 +59,7 @@ export default function ServicesSkeleton() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Array.from({ length: 3 }).map((_, idx) => (
-              <div key={idx} className="p-8 rounded-3xl glass border border-white/10 space-y-6 flex flex-col justify-between">
+              <div key={idx} className="p-8 rounded-3xl glass border border-foreground/10 space-y-6 flex flex-col justify-between">
                 <div className="space-y-4">
                   <Skeleton className="h-4 w-32 rounded-full" />
                   <Skeleton className="h-8 w-1/2 rounded-xl" />

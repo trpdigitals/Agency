@@ -28,13 +28,13 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.15] text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.15] text-foreground">
               Built Digital. <br />
               <span className="text-gradient">Grow Smarter.</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-white/70 mb-8 font-normal leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg text-foreground/70 mb-8 font-normal leading-relaxed max-w-xl">
               We design and build high-performance websites, apps, digital platforms, and AI-powered solutions — helping businesses launch, grow, and scale.
             </p>
 
@@ -50,15 +50,15 @@ export default function Hero() {
 
               <Link
                 href="/services"
-                className="group px-8 py-4 rounded-full glass border-white/15 text-white/80 font-semibold hover:bg-white/5 hover:text-white transition-all text-sm flex items-center justify-center gap-2"
+                className="group px-8 py-4 rounded-full border border-foreground/20 text-foreground/80 font-semibold hover:bg-foreground/5 hover:text-foreground transition-all text-sm flex items-center justify-center gap-2"
               >
                 <span>View Services</span>
-                <ArrowRight className="w-4 h-4 text-white/60 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+                <ArrowRight className="w-4 h-4 text-foreground/50 group-hover:text-foreground group-hover:translate-x-0.5 transition-all" />
               </Link>
             </div>
 
             {/* Trust Signal */}
-            <div className="flex items-center gap-2 text-white/40 text-xs font-normal">
+            <div className="flex items-center gap-2 text-foreground/50 text-xs font-normal">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>100% Code Ownership &middot; Single Accountable Lead &middot; Rapid Sprints</span>
             </div>

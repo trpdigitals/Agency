@@ -50,11 +50,11 @@ export default function ProblemBentoGrid() {
           <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
             WHY TRP DIGITALS EXISTS
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
             Your business deserves better <br />
             <span className="text-gradient">digital solutions.</span>
           </h2>
-          <p className="text-white/60 text-base font-normal">
+          <p className="text-foreground/60 text-base font-normal">
             We make it easier for businesses to build, launch, and grow online without the complexity of managing multiple digital partners.
           </p>
         </motion.div>
@@ -70,18 +70,18 @@ export default function ProblemBentoGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`glass-card p-8 rounded-2xl border border-white/10 relative overflow-hidden ${prob.colSpan}`}
+                className={`glass-card p-8 rounded-2xl border border-foreground/10 relative overflow-hidden ${prob.colSpan}`}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-foreground/5 border border-foreground/10 flex items-center justify-center text-primary shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
                   <span className="text-xs font-mono font-semibold text-primary/80 uppercase tracking-wider px-2.5 py-1 rounded-md bg-primary/10 border border-primary/20">
                     Challenge {prob.num}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{prob.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed font-normal">{prob.desc}</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3">{prob.title}</h3>
+                <p className="text-foreground/60 text-sm leading-relaxed font-normal">{prob.desc}</p>
               </motion.div>
             );
           })}

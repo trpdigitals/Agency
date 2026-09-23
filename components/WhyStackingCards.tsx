@@ -48,11 +48,11 @@ export default function WhyStackingCards() {
             <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
               WHY TRP DIGITALS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
               Built to turn ideas into <br />
               <span className="text-gradient">digital growth.</span>
             </h2>
-            <p className="text-white/60 text-base leading-relaxed mb-8 font-normal">
+            <p className="text-foreground/60 text-base leading-relaxed mb-8 font-normal">
               From your first website to custom apps, SaaS platforms, AI solutions, and digital marketing, TRP Digitals gives you one team to design, build, and grow your digital presence.
             </p>
           </motion.div>
@@ -68,15 +68,15 @@ export default function WhyStackingCards() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="glass-card p-8 rounded-2xl border border-white/10 relative group"
+                  className="glass-card p-8 rounded-2xl border border-foreground/10 relative group"
                 >
                   <div className="flex items-start gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/20 to-secondary/20 border border-primary/30 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/15 to-accent/15 border border-primary/20 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
                       <Icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{card.title}</h3>
-                      <p className="text-white/60 text-sm leading-relaxed font-normal">{card.desc}</p>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">{card.title}</h3>
+                      <p className="text-foreground/60 text-sm leading-relaxed font-normal">{card.desc}</p>
                     </div>
                   </div>
                 </motion.div>

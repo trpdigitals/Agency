@@ -35,7 +35,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-background pt-28 pb-20 overflow-hidden text-foreground">
         
         {/* Page Hero */}
-        <section className="relative py-16 border-b border-white/5">
+        <section className="relative py-16 border-b border-foreground/8">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
           <MaxWrapper>
@@ -45,12 +45,12 @@ export default function ContactPage() {
                 <span>Contact TRP Digitals</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
                 Have a project in mind? <br />
                 <span className="text-gradient">Let&apos;s build it together.</span>
               </h1>
 
-              <p className="text-white/70 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
+              <p className="text-foreground/70 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
                 Tell us what you&apos;re looking to build, improve, or grow. We&apos;ll get back to you and discuss the right digital solution for your business.
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
         </section>
 
         {/* Main Contact Section */}
-        <section className="py-24 border-b border-white/5">
+        <section className="py-24 border-b border-foreground/8">
           <MaxWrapper>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               
@@ -68,56 +68,56 @@ export default function ContactPage() {
                 <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
                   GET IN TOUCH
                 </span>
-                <h2 className="text-3xl font-bold text-white mb-4">Tell us what you want to build.</h2>
-                <p className="text-white/60 text-sm leading-relaxed font-normal">
+                <h2 className="text-3xl font-bold text-foreground mb-4">Tell us what you want to build.</h2>
+                <p className="text-foreground/60 text-sm leading-relaxed font-normal">
                   Whether you need a website, app, e-commerce store, SaaS platform, AI solution, or help growing your online presence, tell us what you have in mind and we'll help you find the right approach.
                 </p>
               </div>
 
               <div className="flex flex-col gap-6">
-                <div className="glass-card p-6 rounded-2xl border border-white/10 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                <div className="glass-card p-6 rounded-2xl border border-foreground/10 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center text-primary shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-mono text-[11px] font-medium uppercase text-white/40 tracking-wider block">EMAIL ADDRESS</span>
-                    <a href="mailto:trpdigitals.dev@gmail.com" className="text-sm font-semibold text-white hover:text-primary transition-colors">
+                    <span className="font-mono text-[11px] font-medium uppercase text-foreground/40 tracking-wider block">EMAIL ADDRESS</span>
+                    <a href="mailto:trpdigitals.dev@gmail.com" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
                       trpdigitals.dev@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="glass-card p-6 rounded-2xl border border-white/10 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary shrink-0">
+                <div className="glass-card p-6 rounded-2xl border border-foreground/10 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-mono text-[11px] font-medium uppercase text-white/40 tracking-wider block">HEADQUARTERS</span>
-                    <span className="text-sm font-semibold text-white">Hyderabad, India</span>
+                    <span className="font-mono text-[11px] font-medium uppercase text-foreground/40 tracking-wider block">HEADQUARTERS</span>
+                    <span className="text-sm font-semibold text-foreground">Hyderabad, India</span>
                   </div>
                 </div>
 
-                <div className="glass-card p-6 rounded-2xl border border-white/10 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center text-accent shrink-0">
+                <div className="glass-card p-6 rounded-2xl border border-foreground/10 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center text-accent shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-mono text-[11px] font-medium uppercase text-white/40 tracking-wider block">PROJECT SUPPORT</span>
-                    <span className="text-sm font-semibold text-white">From idea to launch and beyond</span>
+                    <span className="font-mono text-[11px] font-medium uppercase text-foreground/40 tracking-wider block">PROJECT SUPPORT</span>
+                    <span className="text-sm font-semibold text-foreground">From idea to launch and beyond</span>
                   </div>
                 </div>
               </div>
 
               {/* Social Channels */}
               <div className="pt-2">
-                <span className="font-mono text-xs font-medium uppercase tracking-widest text-white/40 mb-4 block">FOLLOW OUR WORK</span>
+                <span className="font-mono text-xs font-medium uppercase tracking-widest text-foreground/40 mb-4 block">FOLLOW OUR WORK</span>
                 <div className="flex items-center gap-3">
                   <a
                     href="https://www.linkedin.com/company/trp-digitals"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Visit TRP Digitals on LinkedIn"
-                    className="w-10 h-10 rounded-full glass border border-white/15 text-white/70 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition-all flex items-center justify-center"
+                    className="w-10 h-10 rounded-full border border-foreground/15 text-foreground/60 hover:text-primary hover:border-primary/50 hover:bg-primary/10 transition-all flex items-center justify-center"
                   >
                     <FaLinkedinIn size={16} />
                   </a>
@@ -126,7 +126,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Visit TRP Digitals on Instagram"
-                    className="w-10 h-10 rounded-full glass border border-white/15 text-white/70 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition-all flex items-center justify-center"
+                    className="w-10 h-10 rounded-full border border-foreground/15 text-foreground/60 hover:text-primary hover:border-primary/50 hover:bg-primary/10 transition-all flex items-center justify-center"
                   >
                     <FaInstagram size={16} />
                   </a>
@@ -144,13 +144,13 @@ export default function ContactPage() {
       </section>
 
       {/* What Happens Next Section */}
-      <section className="py-24 border-b border-white/5">
+      <section className="py-24 border-b border-foreground/8">
         <MaxWrapper>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
               HOW IT STARTS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               From first conversation <br />
               <span className="text-gradient">to final launch.</span>
             </h2>
@@ -162,14 +162,14 @@ export default function ContactPage() {
               return (
                 <div
                   key={idx}
-                  className="glass-card p-8 rounded-2xl border border-white/10 relative"
+                  className="glass-card p-8 rounded-2xl border border-foreground/10 relative"
                 >
                   <span className="text-3xl font-mono font-medium text-primary/40 block mb-4">{step.num}</span>
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center text-primary mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-white/60 text-xs leading-relaxed font-normal">{step.desc}</p>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                  <p className="text-foreground/60 text-xs leading-relaxed font-normal">{step.desc}</p>
                 </div>
               );
             })}

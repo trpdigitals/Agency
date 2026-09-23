@@ -44,7 +44,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <main className="min-h-screen bg-[#070709] text-foreground flex items-center justify-center p-6 relative overflow-hidden font-sans">
+    <main className="admin-scope min-h-screen bg-[#070709] text-white flex items-center justify-center p-6 relative overflow-hidden font-sans">
       {/* Background blur mesh */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
 

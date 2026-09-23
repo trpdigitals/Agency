@@ -36,7 +36,7 @@ export default function FAQAccordion() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-background relative border-t border-white/5">
+    <section className="py-24 bg-background relative border-t border-foreground/8">
       <MaxWrapper>
         {/* Header */}
         <motion.div
@@ -49,7 +49,7 @@ export default function FAQAccordion() {
           <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
             FREQUENTLY ASKED QUESTIONS
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
             Everything you need to know <br />
             <span className="text-gradient">before getting started.</span>
           </h2>
@@ -67,14 +67,14 @@ export default function FAQAccordion() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="glass-card rounded-2xl border border-white/10 overflow-hidden"
+                className="glass-card rounded-2xl border border-foreground/10 overflow-hidden"
               >
                 <button
                   type="button"
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-base sm:text-lg text-white hover:text-primary transition-colors"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-base sm:text-lg text-foreground hover:text-primary transition-colors"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
@@ -90,7 +90,7 @@ export default function FAQAccordion() {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="px-6 pb-6 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4 font-normal">
+                      <div className="px-6 pb-6 text-foreground/60 text-sm leading-relaxed border-t border-foreground/8 pt-4 font-normal">
                         {faq.a}
                       </div>
                     </motion.div>

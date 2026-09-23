@@ -97,7 +97,7 @@ export default function Services() {
             <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
               Six Core Capabilities
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               From ideas to <br />
               <span className="text-gradient">Digital Growth</span>
             </h2>
@@ -111,7 +111,7 @@ export default function Services() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass border-white/15 text-white text-sm font-semibold hover:border-primary/40 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-foreground/15 text-foreground text-sm font-semibold hover:border-primary/40 hover:text-primary transition-all"
             >
               <span>View all services</span>
               <ArrowRight className="w-4 h-4 text-primary" />
@@ -129,24 +129,24 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="glass-card p-6 sm:p-8 rounded-2xl border border-white/10 flex flex-col justify-between h-full group hover:border-primary/30 transition-all shadow-lg"
+                className="glass-card p-6 sm:p-8 rounded-2xl border border-foreground/10 flex flex-col justify-between h-full group hover:border-primary/30 transition-all shadow-sm"
               >
                 <div className="flex flex-col grow">
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/20 to-secondary/20 border border-primary/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/15 to-accent/15 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {svc.title}
                   </h3>
 
-                  <p className="text-white/60 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+                  <p className="text-foreground/60 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
                     {svc.description}
                   </p>
 
                   <ul className="space-y-2.5 mb-6 mt-auto">
                     {svc.bullets.map((b, i) => (
-                      <li key={i} className="text-xs sm:text-sm text-white/80 flex items-start gap-2.5 font-normal">
+                      <li key={i} className="text-xs sm:text-sm text-foreground/70 flex items-start gap-2.5 font-normal">
                         <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                         <span>{b}</span>
                       </li>
@@ -156,7 +156,7 @@ export default function Services() {
 
                 <Link
                   href="/contact"
-                  className="w-full py-3 rounded-xl text-xs font-semibold text-center inline-flex items-center justify-center gap-2 mt-4 glass border border-white/10 text-white/80 hover:text-white hover:border-primary/40 hover:bg-primary/5 transition-all group/btn"
+                  className="w-full py-3 rounded-xl text-xs font-semibold text-center inline-flex items-center justify-center gap-2 mt-4 border border-foreground/10 text-foreground/70 hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all group/btn"
                 >
                   <span>Discuss Project</span>
                   <ArrowRight className="w-4 h-4 text-primary group-hover/btn:translate-x-0.5 transition-transform" />

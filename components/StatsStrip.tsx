@@ -57,7 +57,7 @@ export default function StatsStrip() {
   return (
     <section
       ref={ref}
-      className="relative py-16 border-y border-white/5 bg-[#0d0d0d] overflow-hidden"
+      className="relative py-16 border-y border-foreground/8 bg-foreground/[0.02] overflow-hidden"
       aria-label="Agency statistics"
     >
       {/* Subtle gradient backdrop */}
@@ -79,7 +79,7 @@ export default function StatsStrip() {
                 color={stat.color}
                 inView={inView}
               />
-              <p className="text-white/60 text-sm md:text-base font-normal leading-snug">
+              <p className="text-foreground/70 text-sm md:text-base font-medium leading-snug">
                 {stat.label}
               </p>
               {/* Thin accent line */}

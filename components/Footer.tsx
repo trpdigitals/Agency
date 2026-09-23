@@ -14,7 +14,7 @@ export default function Footer() {
   }
 
   return (
-    <footer id="site-footer" className="py-20 border-t border-white/5 bg-background relative overflow-hidden">
+    <footer id="site-footer" className="py-20 border-t border-foreground/8 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent" />
       <MaxWrapper>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-mono text-xs font-semibold mb-6 text-white tracking-wider uppercase">Navigate</h3>
+            <h3 className="font-mono text-xs font-semibold mb-6 text-foreground tracking-wider uppercase">Navigate</h3>
             <nav aria-label="Footer Navigation">
               <ul className="flex flex-col gap-3 text-sm font-normal text-foreground/60">
                 <li><Link href="/" title="TRP Digitals Homepage" className="hover:text-primary transition-colors">Home</Link></li>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-mono text-xs font-semibold mb-6 text-white tracking-wider uppercase">Get in Touch</h4>
+            <h4 className="font-mono text-xs font-semibold mb-6 text-foreground tracking-wider uppercase">Get in Touch</h4>
             <ul className="flex flex-col gap-3 text-sm font-normal text-foreground/60">
               <li>
                 <a href="mailto:trpdigitals.dev@gmail.com" className="hover:text-primary transition-colors">
@@ -64,12 +64,12 @@ export default function Footer() {
               </li>
               <li>+91 9063851105</li>
               <li>Hyderabad, India</li>
-              <li className="font-mono text-xs text-white/40 pt-2">Response SLA: Within 24 Hours</li>
+              <li className="font-mono text-xs text-foreground/40 pt-2">Response SLA: Within 24 Hours</li>
             </ul>
           </div>
         </div>
         
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-xs text-foreground/40 font-normal">
+        <div className="pt-8 border-t border-foreground/8 flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-xs text-foreground/40 font-normal">
           <p>© 2026 TRP Digitals. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="/privacy" className="hover:text-foreground/60">Privacy Policy</Link>

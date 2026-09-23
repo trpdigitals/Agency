@@ -94,7 +94,7 @@ export default function ServicesClient() {
     <main className="min-h-screen bg-background pt-28 pb-20 overflow-hidden text-foreground">
       
       {/* Page Hero */}
-      <section className="relative py-16 border-b border-white/5">
+      <section className="relative py-16 border-b border-foreground/8">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
         <MaxWrapper>
@@ -109,12 +109,12 @@ export default function ServicesClient() {
               <span>Full Service Catalog</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
               Everything Digital. <br />
               <span className="text-gradient">Built for Your Business.</span>
             </h1>
 
-            <p className="text-white/70 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
+            <p className="text-foreground/70 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
               From websites and mobile apps to SaaS, e-commerce, AI automation, and digital marketing — TRP Digitals provides the digital solutions your business needs to build, launch, and grow.
             </p>
           </motion.div>
@@ -122,7 +122,7 @@ export default function ServicesClient() {
       </section>
 
       {/* Core Services Grid */}
-      <section className="py-24 border-b border-white/5">
+      <section className="py-24 border-b border-foreground/8">
         <MaxWrapper>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ export default function ServicesClient() {
             <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
               What We Build
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               Our core digital <span className="text-gradient">capabilities.</span>
             </h2>
           </motion.div>
@@ -149,19 +149,19 @@ export default function ServicesClient() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.08 }}
-                  className="glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between h-full group hover:border-primary/30 transition-all shadow-lg"
+                  className="glass-card p-8 rounded-2xl border border-foreground/10 flex flex-col justify-between h-full group hover:border-primary/30 transition-all shadow-sm"
                 >
                   <div className="flex flex-col grow">
-                    <div className="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-xl bg-primary/15 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                       <Icon className="w-6 h-6" />
                     </div>
 
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">{svc.title}</h3>
-                    <p className="text-white/60 text-xs leading-relaxed mb-6 font-normal">{svc.desc}</p>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">{svc.title}</h3>
+                    <p className="text-foreground/60 text-xs leading-relaxed mb-6 font-normal">{svc.desc}</p>
 
                     <ul className="space-y-2.5 mb-6 mt-auto">
                       {svc.bullets.map((b, i) => (
-                        <li key={i} className="text-xs text-white/80 flex items-start gap-2.5 font-normal">
+                        <li key={i} className="text-xs text-foreground/70 flex items-start gap-2.5 font-normal">
                           <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                           <span>{b}</span>
                         </li>
@@ -171,7 +171,7 @@ export default function ServicesClient() {
 
                   <Link
                     href="/contact"
-                    className="w-full py-3 rounded-xl text-xs font-semibold text-center inline-flex items-center justify-center gap-2 mt-4 glass border border-white/15 text-white/80 hover:text-white hover:border-primary/40 hover:bg-primary/5 transition-all group/btn"
+                    className="w-full py-3 rounded-xl text-xs font-semibold text-center inline-flex items-center justify-center gap-2 mt-4 border border-foreground/10 text-foreground/70 hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all group/btn"
                   >
                     <span>Discuss Project</span>
                     <ArrowRight className="w-4 h-4 text-primary group-hover/btn:translate-x-0.5 transition-transform" />
@@ -184,7 +184,7 @@ export default function ServicesClient() {
       </section>
 
       {/* Multi-Service Packages */}
-      <section className="py-24 border-b border-white/5">
+      <section className="py-24 border-b border-foreground/8">
         <MaxWrapper>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -196,7 +196,7 @@ export default function ServicesClient() {
             <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
               Multi-Service Packages
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               One partner. <span className="text-gradient">Three ways to scale.</span>
             </h2>
           </motion.div>
@@ -210,7 +210,7 @@ export default function ServicesClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
                 className={`glass-card p-8 rounded-3xl border flex flex-col justify-between relative ${
-                  pkg.popular ? "border-primary shadow-[0_0_40px_rgba(192,132,252,0.2)]" : "border-white/10"
+                  pkg.popular ? "border-primary shadow-[0_0_40px_rgba(239,68,68,0.15)]" : "border-foreground/10"
                 }`}
               >
                 {pkg.popular && (
@@ -221,12 +221,12 @@ export default function ServicesClient() {
 
                 <div>
                   <span className="font-mono text-xs font-medium text-primary uppercase tracking-wider block mb-2">{pkg.badge}</span>
-                  <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-                  <p className="text-white/60 text-xs mb-6 leading-relaxed font-normal">{pkg.desc}</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
+                  <p className="text-foreground/60 text-xs mb-6 leading-relaxed font-normal">{pkg.desc}</p>
 
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((feat, i) => (
-                      <li key={i} className="text-xs text-white/80 flex items-center gap-2.5 font-normal">
+                      <li key={i} className="text-xs text-foreground/70 flex items-center gap-2.5 font-normal">
                         <Check className="w-4 h-4 text-primary shrink-0" />
                         <span>{feat}</span>
                       </li>
@@ -237,7 +237,7 @@ export default function ServicesClient() {
                 <Link
                   href="/contact"
                   className={`w-full py-4 rounded-full text-xs font-semibold text-center flex items-center justify-center gap-2 ${
-                    pkg.popular ? "cta-primary" : "glass border border-white/20 text-white hover:bg-white/10"
+                    pkg.popular ? "cta-primary" : "border border-foreground/15 text-foreground/70 hover:bg-foreground/5 hover:text-foreground"
                   }`}
                 >
                   <span>Discuss Your Package</span>

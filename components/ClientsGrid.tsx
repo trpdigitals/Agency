@@ -46,11 +46,11 @@ export default function ClientsGrid() {
           <span className="font-mono text-xs font-medium uppercase tracking-widest text-primary mb-3 block">
             WHO WE WORK WITH
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
             Digital solutions for <br />
             <span className="text-gradient">businesses at every stage.</span>
           </h2>
-          <p className="text-white/60 text-base font-normal">
+          <p className="text-foreground/60 text-base font-normal">
             Whether you&apos;re starting from scratch or ready to scale, we build digital solutions around where your business is today and where you want to go next.
           </p>
         </motion.div>
@@ -66,17 +66,17 @@ export default function ClientsGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between"
+                className="glass-card p-8 rounded-2xl border border-foreground/10 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex justify-between items-start mb-6">
                     <span className="text-2xl font-mono font-medium text-primary/40">{vert.num}</span>
-                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/20 to-secondary/20 border border-primary/30 flex items-center justify-center text-primary shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/15 to-accent/15 border border-primary/20 flex items-center justify-center text-primary shrink-0">
                       <Icon className="w-6 h-6" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{vert.title}</h3>
-                  <p className="text-white/60 text-xs leading-relaxed font-normal">{vert.desc}</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{vert.title}</h3>
+                  <p className="text-foreground/60 text-xs leading-relaxed font-normal">{vert.desc}</p>
                 </div>
               </motion.div>
             );
